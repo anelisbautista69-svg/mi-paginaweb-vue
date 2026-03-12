@@ -15,137 +15,180 @@ onMounted(() => {
 </script>
 
 <template>
-  <header class="site-header">
-    <a href="#" class="logo-link" aria-label="Inicio">
-      <img src="./assets/logo.svg" alt="Logo JS Práctica" class="logo" />
-    </a>
 
-    <div class="brand">
-      <h1>Práctica de JavaScript</h1>
-      <p class="subtitle">Programación Web · Guía con ejemplos ejecutables</p>
-    </div>
+<header class="site-header">
+<a href="#inicio" class="logo-link">
+<img src="./assets/logo.svg" alt="Logo JS Práctica" class="logo"/>
+</a>
 
-    <form class="search" role="search" @submit.prevent>
-      <label for="q" class="sr-only">Buscar</label>
-      <input
-        id="q"
-        type="search"
-        placeholder="Buscar en esta página..."
-        autocomplete="off"
-      />
-    </form>
+<div class="brand">
+<h1>Práctica de JavaScript</h1>
+<p class="subtitle">Programación Web · Guía con ejemplos</p>
+</div>
 
-    <!-- BOTÓN MODO OSCURO -->
-    <button class="dark-btn" @click="toggleDark()">
-      {{ isDark ? "☀️ Claro" : "🌙 Oscuro" }}
-    </button>
-  </header>
+<button class="dark-btn" @click="toggleDark()">
+{{ isDark ? "☀️ Claro" : "🌙 Oscuro" }}
+</button>
+</header>
 
-  <nav class="topnav" aria-label="Navegación principal">
-    <ul>
-      <li><a href="#">¿Qué es JS?</a></li>
-      <li><a href="#">Tipos de datos</a></li>
-      <li><a href="#">Operadores</a></li>
-      <li><a href="#">Funciones</a></li>
-      <li><a href="#">Conversión</a></li>
-      <li><a href="#">Variables</a></li>
-      <li><a href="#">Entrada/Salida</a></li>
-      <li><a href="#">Estructuras de control</a></li>
-      <li><a href="#">Objetos</a></li>
-      <li><a href="#">Referencias</a></li>
-    </ul>
-  </nav>
+<nav class="topnav">
+<ul>
+<li><a href="#js">¿Qué es JS?</a></li>
+<li><a href="#tipos">Tipos de datos</a></li>
+<li><a href="#operadores">Operadores</a></li>
+<li><a href="#funciones">Funciones</a></li>
+<li><a href="#conversion">Conversión</a></li>
+<li><a href="#variables">Variables</a></li>
+<li><a href="#entrada">Entrada/Salida</a></li>
+<li><a href="#control">Estructuras de control</a></li>
+<li><a href="#objetos">Objetos</a></li>
+<li><a href="#referencias">Referencias</a></li>
+</ul>
+</nav>
 
-  <main class="layout">
-    <section class="content" style="grid-column: 1/-1">
-      <article class="card" style="text-align: center; padding: 32px 24px">
-        <h2 style="margin-top: 0; font-size: clamp(24px, 3vw, 34px)">
-          Bienvenid@ a la
-          <span style="color: var(--accent)">Práctica de JavaScript</span>
-        </h2>
+<main class="layout">
 
-        <p style="max-width: 740px; margin: 10px auto 0; color: var(--muted)">
-          Sitio oficial de la práctica de <strong>Programación Web</strong>.
-          Aquí encontrarás definiciones claras, ejemplos ejecutables en modal y
-          una navegación por pestañas a cada tema.
-        </p>
+<section id="inicio" class="card">
+<h2>Bienvenid@ a la Práctica de JavaScript</h2>
+<p>
+Este sitio fue creado para explicar los conceptos básicos de JavaScript
+de forma sencilla para la materia de programación web.
+</p>
+</section>
 
-        <p style="margin-top: 18px">
-          <a class="button" href="#">¿Qué es JS?</a>
-          <a class="button" href="#">Tipos de datos</a>
-          <a class="button" href="#">Operadores</a>
-          <a class="button" href="#">Funciones</a>
-          <a class="button" href="#">Referencias</a>
-        </p>
-      </article>
-    </section>
-  </main>
+<section id="js" class="card">
+<h2>¿Qué es JavaScript?</h2>
+<p>
+JavaScript es un lenguaje de programación utilizado para crear páginas web
+interactivas. Permite agregar botones dinámicos, animaciones,
+validaciones de formularios y muchas funciones en los sitios web.
+</p>
+</section>
 
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <button class="modal-close">×</button>
-      <h3>Resultado</h3>
-      <div id="modal-body" class="modal-body"></div>
-    </div>
-  </div>
+<section id="tipos" class="card">
+<h2>Tipos de datos</h2>
+<p>
+Los tipos de datos más comunes en JavaScript son:
+string (texto), number (números), boolean (verdadero o falso),
+null, undefined y object.
+</p>
+</section>
 
-  <footer class="site-footer">
-    <p><strong>Autores:</strong> ane y bry</p>
+<section id="operadores" class="card">
+<h2>Operadores</h2>
+<p>
+Los operadores permiten realizar operaciones matemáticas o comparaciones
+como suma (+), resta (-), multiplicación (*), división (/)
+y comparaciones como == o ===.
+</p>
+</section>
 
-    <p><strong>Contacto:</strong> anebry04@gmail.com</p>
+<section id="funciones" class="card">
+<h2>Funciones</h2>
+<p>
+Una función es un bloque de código que realiza una tarea específica
+y puede reutilizarse varias veces dentro del programa.
+</p>
+</section>
 
-    <p>
-      <strong>Copyright:</strong> ©
-      <span id="anio"></span> Anebry. Todos los derechos reservados.
-    </p>
+<section id="conversion" class="card">
+<h2>Conversión de datos</h2>
+<p>
+JavaScript permite convertir tipos de datos utilizando funciones como
+Number(), String() o Boolean().
+</p>
+</section>
 
-    <p>
-      <strong>Políticas y legales:</strong>
-      <a href="#">Aviso de privacidad</a> ·
-      <a href="#">Licencias/Créditos</a>
-    </p>
+<section id="variables" class="card">
+<h2>Variables</h2>
+<p>
+Las variables almacenan información. En JavaScript se pueden declarar
+con let, const o var.
+</p>
+</section>
 
-    <p>
-      <strong>Enlaces relacionados:</strong>
-      <a
-        href="https://developer.mozilla.org/es/docs/Web/JavaScript"
-        target="_blank"
-        rel="noopener"
-        >MDN JavaScript</a
-      >
-      ·
-      <a href="https://tc39.es/ecma262/" target="_blank" rel="noopener"
-        >Especificación ECMAScript</a
-      >
-    </p>
+<section id="entrada" class="card">
+<h2>Entrada y salida</h2>
+<p>
+JavaScript permite mostrar información con alert(), console.log()
+o interactuar con el usuario mediante formularios.
+</p>
+</section>
 
-    <p>
-      <strong>Enlaces internos:</strong>
-      <a href="#">Inicio</a> ·
-      <a href="#">Referencias</a>
-    </p>
+<section id="control" class="card">
+<h2>Estructuras de control</h2>
+<p>
+Las estructuras de control permiten tomar decisiones en el programa,
+como if, else, switch o ciclos como for y while.
+</p>
+</section>
 
-    <p>Última actualización: <span id="last-updated"></span></p>
-  </footer>
+<section id="objetos" class="card">
+<h2>Objetos</h2>
+<p>
+Un objeto es una colección de propiedades y valores que permiten
+organizar información dentro del programa.
+</p>
+</section>
+
+<section id="referencias" class="card">
+<h2>Referencias</h2>
+<p>
+Puedes aprender más sobre JavaScript en la documentación oficial
+de MDN y en la especificación de ECMAScript.
+</p>
+</section>
+
+</main>
+
+<footer class="site-footer">
+
+<p><strong>Autores:</strong> ane y bry</p>
+
+<p><strong>Contacto:</strong> anebry04@gmail.com</p>
+
+<p>
+<strong>Copyright:</strong> ©
+<span id="anio"></span> Anebry.
+</p>
+
+<p>
+<a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank">
+Documentación MDN
+</a>
+</p>
+
+<p>Última actualización: <span id="last-updated"></span></p>
+
+</footer>
+
 </template>
 
 <style>
+
 @import "./styles.css";
 
-/* botón modo oscuro */
-
-.dark-btn {
-  margin-left: 20px;
-  padding: 8px 14px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  background: #42b883;
-  color: white;
-  font-weight: bold;
+.dark-btn{
+margin-left:20px;
+padding:8px 14px;
+border-radius:8px;
+border:none;
+cursor:pointer;
+background:#42b883;
+color:white;
+font-weight:bold;
 }
 
-.dark-btn:hover {
-  opacity: 0.8;
+.dark-btn:hover{
+opacity:0.8;
 }
+
+.card{
+padding:30px;
+margin:20px;
+border-radius:10px;
+background:#1e1e1e;
+color:white;
+}
+
 </style>
